@@ -10,3 +10,14 @@
 ##### 1 pav - su struktūra , 2 pav - su klasėmis
       
  - Kaip matome struktūrą pakeitus į klasę programos sparta nežymiai sumažėja.
+
+## Versijų istorija (changelog)
+
+### [Changelog v0.1 (2018-04-24)](https://github.com/PauliusKu/OP-3/releases/tag/v0.1)
+#### Pridėta
+- Struktūra Mokiniai pakeista į klasą Mokiniai
+- Spartos palyginimas tarp klasęs ir struktūros
+- Papildytas README failas
+#### Pakeista
+
+#### Pašalinta
