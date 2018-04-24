@@ -61,9 +61,6 @@ void GeneruotiFaila(unsigned int n) //sugeneruoja n skaiciu irasu
 	of.close();
 }
 //----------------------------------------------------------------------------------------
-bool customCompare(Mokiniai &stud1, Mokiniai &stud2){
-    return stud1.pavarde < stud2.pavarde;
-}
 //----------------------------------------------------------------------------------------
 int ivestiSk( int a, int b)
 {
