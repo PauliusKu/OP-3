@@ -7,6 +7,7 @@
 #include <deque>
 #include <list>
 #include <iterator>
+#include <sstream>
 #include <algorithm>
 
 using std::string;
@@ -16,16 +17,30 @@ using std::cin;
 using std::endl;
 
 class Mokiniai{
-	public:
-		string pavarde{};
-		string vardas{};
+	private:
+		string pavarde;
+		string vardas;
 		vector<int> Pazymiai;
-		double galBalVid{};
-		double galBalMed{};	
+		double galBalVid_;
+		double galBalMed_;
+	public:
+		
+		Mokiniai() : pavarde(""), vardas(""), galBalVid_(1), galBalMed_(1) {}
+    	Mokiniai(std::string v, std::string p, std::vector<int> d) : vardas(v), pavarde(p), Pazymiai(d) {}
+    	double getAverage(){return galBalVid_;}
+   		std::string getPavarde(){return pavarde;}
+   		
+   		template <typename T> friend void Isvestis(T &Mok);
+   		template <typename T> friend void sortContainer(T &);
+   		template <typename T> friend void Nuskaitymas(T &Mok);
+   		template <typename T> friend void Failas(bool b = true);
+   		template <typename T> friend void Failas1(bool b = true);
+   		template <typename T> friend void Random();
+   		friend void Konsole();
+   		
 };
 
 int ivestiSk( int a, int b);
-template <typename T> void sortContainer(T &);
 bool customCompare(Mokiniai &, Mokiniai &);
 double Vidurkis(vector<int> &Pazymiai);
 double Mediana(vector<int> &Pazymiai);
@@ -33,8 +48,12 @@ void GeneruotiFaila(unsigned int n);
 
 bool Win (double i) { return (i >= 6);}
 //--------------------------------------------------------------------------------------------------
+bool customCompare(Mokiniai &stud1, Mokiniai &stud2){
+    return stud1.getPavarde() < stud2.getPavarde();
+}
+//--------------------------------------------------------------------------------------------------
 bool Maziau(Mokiniai &stud){
-    return stud.galBalVid < 6;
+    return stud.getAverage() < 6;
 }
 //--------------------------------------------------------------------------------------------------
 template <typename T> void Isvestis(T &Mok)
@@ -68,7 +87,7 @@ template <typename T> void Isvestis(T &Mok)
 		cout << std::setw(a+1) << std::left << v.pavarde;
 		cout << std::setw(b+1) << std::left << v.vardas;
 		cout << std::fixed;
-		cout << std::setw(3) << std::left << std::setprecision(2) << v.galBalVid << "  " << v.galBalMed << endl;
+		cout << std::setw(3) << std::left << std::setprecision(2) << v.galBalVid_ << "  " << v.galBalMed_ << endl;
 	}
 	for (unsigned int i = 0; i < a+b+12; i++)
 	{
@@ -130,8 +149,8 @@ template <typename T> void Failas(bool b = true)
 				case 1: throw "Truksta nd ivertinimu!";
 				case 0: throw "Truksta nd ivertinimu ir egzamino ivertinimu!";
 			}
-			v.galBalVid = Vidurkis(v.Pazymiai);
-			v.galBalMed = Mediana(v.Pazymiai);
+			v.galBalVid_ = Vidurkis(v.Pazymiai);
+			v.galBalMed_ = Mediana(v.Pazymiai);
 		}
 		
 		unsigned n = std::count_if (Mok.begin(), Mok.end(), Maziau);
@@ -171,8 +190,8 @@ template <typename T> void Failas1(bool b = true)
 				case 1: throw "Truksta nd ivertinimu!";
 				case 0: throw "Truksta nd ivertinimu ir egzamino ivertinimu!";
 			}
-			v.galBalVid = Vidurkis(v.Pazymiai);
-			v.galBalMed = Mediana(v.Pazymiai);
+			v.galBalVid_ = Vidurkis(v.Pazymiai);
+			v.galBalMed_ = Mediana(v.Pazymiai);
    		 
 		}
 		
@@ -267,8 +286,8 @@ template <typename T> void Random()
 	Mok.Pazymiai.push_back(a);
 	
 	
-	Mok.galBalVid = Vidurkis(Mok.Pazymiai);
-	Mok.galBalMed = Mediana(Mok.Pazymiai); //skaiciuojama mediana perduodama vidurkio kintamajam del isvesties patogumo
+	Mok.galBalVid_ = Vidurkis(Mok.Pazymiai);
+	Mok.galBalMed_ = Mediana(Mok.Pazymiai); //skaiciuojama mediana perduodama vidurkio kintamajam del isvesties patogumo
 	
 	T MokiniaiV{Mok};
 	Isvestis(MokiniaiV);
@@ -320,9 +339,9 @@ void Konsole()
 	}while (t);
 	Mok.Pazymiai.push_back(a);
 	
-	Mok.galBalVid = Vidurkis(Mok.Pazymiai);
+	Mok.galBalVid_ = Vidurkis(Mok.Pazymiai);
 	std::sort (Mok.Pazymiai.begin(), Mok.Pazymiai.end()-1); //rikiavimas
-	Mok.galBalMed = Mediana(Mok.Pazymiai); //skaiciuojama mediana perduodama vidurkio kintamajam del isvesties patogumo
+	Mok.galBalMed_ = Mediana(Mok.Pazymiai); //skaiciuojama mediana perduodama vidurkio kintamajam del isvesties patogumo
 	vector<Mokiniai> MokiniaiV{Mok};
 	Isvestis(MokiniaiV);
 	cout << "Funkcijos pabaiga" << endl;
