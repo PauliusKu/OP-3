@@ -10,7 +10,8 @@
 using std::cout;
 using std::cin;
 using std::endl;
-		
+
+	
 //----------------------------------------------------------------------------------------
 double Vidurkis(vector<int> &Pazymiai)
 {
