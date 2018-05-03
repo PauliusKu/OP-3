@@ -10,33 +10,76 @@
 #include <sstream>
 #include <algorithm>
 
+using std::ostream;
 using std::string;
 using std::vector;
 using std::cout;
 using std::cin;
 using std::endl;
 
+/// Mokiniø klasë
 class Mokiniai{
 	private:
+		///Mokinio pavardë
 		string pavarde;
+		///Mokinio vardas
 		string vardas;
+		///Mokinio paþymiai
 		vector<int> Pazymiai;
+		///Mokinio galutinis balas (skaièiuojant vidurká)
 		double galBalVid_;
+		///Mokinio galutinis balas (skaièiuojant medianà)
 		double galBalMed_;
 	public:
-		
+		/**
+     	* Sukonstruoja Mokinio objektà
+     	*/
 		Mokiniai() : pavarde(""), vardas(""), galBalVid_(1), galBalMed_(1) {}
+
     	Mokiniai(std::string v, std::string p, std::vector<int> d) : vardas(v), pavarde(p), Pazymiai(d) {}
+  		/**
+   		* Graþinamas vidurkis
+    	* @return Mokinio galBalVid
+   		*/
     	double getAverage(){return galBalVid_;}
+    	/**
+   		* Graþinama pavarde
+    	* @return Mokinio pavarde
+   		*/
    		std::string getPavarde(){return pavarde;}
+   		/**
+   		* Mokinio informacijos iðvedimas
+  		* @return iðvesties strea'mas
+  		*/
+   		friend ostream &operator<<(ostream&, Mokiniai&);
+    	/**
+    	* Tikrina, kurio mokinio vardas ir pavarde eina pirmiau nei kito
+    	* @return Ar mokinio vardas ir pavardë abeceliðkai eina pirmiau nei kito
+    	*/
+   		bool operator< (const Mokiniai& rhs);
+    	/**
+    	* Tikrina, kurio mokinio vardas ir pavarde eina vëliau nei kito
+    	* @return Ar mokinio vardas ir pavardë abeceliðkai eina vëliau nei kito
+    	*/
+   		bool operator> (const Mokiniai& rhs);
+    	/**
+    	* Tikrinama, ar mokinio vardas ir sutampa su kito
+    	* @return Ar mokinio vardas ir sutampa su kito
+    	*/
+   		bool operator== (const Mokiniai& rhs);
+    	/**
+    	* Tikrinama, ar mokinio vardas ir nesutampa su kito
+    	* @return Ar mokinio vardas ir nesutampa su kito
+    	*/
+   		bool operator!= (const Mokiniai& rhs);
    		
+   		friend void Konsole();
    		template <typename T> friend void Isvestis(T &Mok);
    		template <typename T> friend void sortContainer(T &);
    		template <typename T> friend void Nuskaitymas(T &Mok);
    		template <typename T> friend void Failas(bool b = true);
    		template <typename T> friend void Failas1(bool b = true);
    		template <typename T> friend void Random();
-   		friend void Konsole();
    		
 };
 
@@ -46,7 +89,29 @@ double Vidurkis(vector<int> &Pazymiai);
 double Mediana(vector<int> &Pazymiai);
 void GeneruotiFaila(unsigned int n);
 
+ostream &operator<<(ostream &output, Mokiniai &M){
+    output << M.vardas << " " << M.pavarde << " " << M.galBalVid_ << " " << M.galBalMed_ << endl;
+    return output;
+}
+//--------------------------------------------------------------------------------------------------
+bool Mokiniai::operator<(const Mokiniai &rhs)
+{
+    return pavarde <= rhs.pavarde || (pavarde == rhs.pavarde && vardas < rhs.vardas);
+}
 bool Win (double i) { return (i >= 6);}
+//--------------------------------------------------------------------------------------------------
+bool Mokiniai::operator>(const Mokiniai &rhs) {
+    return !operator<(rhs);
+}
+//--------------------------------------------------------------------------------------------------
+bool Mokiniai::operator==(const Mokiniai &rhs) {
+    return vardas == rhs.vardas && pavarde == rhs.pavarde;
+}
+//--------------------------------------------------------------------------------------------------
+bool Mokiniai::operator!=(const Mokiniai &rhs) {
+    return !operator==(rhs);
+}
+
 //--------------------------------------------------------------------------------------------------
 bool customCompare(Mokiniai &stud1, Mokiniai &stud2){
     return stud1.getPavarde() < stud2.getPavarde();

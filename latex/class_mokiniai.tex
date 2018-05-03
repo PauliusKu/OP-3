@@ -2,6 +2,11 @@
 \label{class_mokiniai}\index{Mokiniai@{Mokiniai}}
 
 
+Mokiniø klasë  
+
+
+
+
 {\ttfamily \#include $<$Headeris.\+h$>$}
 
 \subsection*{Public Member Functions}
@@ -14,6 +19,14 @@
 double \mbox{\hyperlink{class_mokiniai_a4fbaa66eb59819ec942e2443a69fed4b}{get\+Average}} ()
 \item 
 std\+::string \mbox{\hyperlink{class_mokiniai_a50c74d525d0b2e381b1a7013d1d350e4}{get\+Pavarde}} ()
+\item 
+bool \mbox{\hyperlink{class_mokiniai_a4043290f06244077194d8b4cf05ee71f}{operator$<$}} (const \mbox{\hyperlink{class_mokiniai}{Mokiniai}} \&rhs)
+\item 
+bool \mbox{\hyperlink{class_mokiniai_ad84735ba48997891195d0e3e97fd89ca}{operator$>$}} (const \mbox{\hyperlink{class_mokiniai}{Mokiniai}} \&rhs)
+\item 
+bool \mbox{\hyperlink{class_mokiniai_a8c87834d732e99917e2c28f8e8b67393}{operator==}} (const \mbox{\hyperlink{class_mokiniai}{Mokiniai}} \&rhs)
+\item 
+bool \mbox{\hyperlink{class_mokiniai_aeba9ca6aee89d720b2e2ff5eda636e4b}{operator!=}} (const \mbox{\hyperlink{class_mokiniai}{Mokiniai}} \&rhs)
 \end{DoxyCompactItemize}
 \subsection*{Friends}
 \begin{DoxyCompactItemize}
@@ -30,9 +43,14 @@ std\+::string \mbox{\hyperlink{class_mokiniai_a50c74d525d0b2e381b1a7013d1d350e4}
 \item 
 {\footnotesize template$<$typename T $>$ }\\void \mbox{\hyperlink{class_mokiniai_ab5990b7e39e0e6a78a80a20caa87e33d}{Random}} ()
 \item 
+ostream \& \mbox{\hyperlink{class_mokiniai_ac9c70cd14a790b654aa7ef133b173a42}{operator$<$$<$}} (ostream \&, \mbox{\hyperlink{class_mokiniai}{Mokiniai}} \&)
+\item 
 void \mbox{\hyperlink{class_mokiniai_a48b19837646f9c78fb3627c49f43fafb}{Konsole}} ()
 \end{DoxyCompactItemize}
 
+
+\subsection{Detailed Description}
+Mokiniø klasë 
 
 \subsection{Constructor \& Destructor Documentation}
 \mbox{\Hypertarget{class_mokiniai_a3d178ed1b403c8c2c016cad13fee7831}\label{class_mokiniai_a3d178ed1b403c8c2c016cad13fee7831}} 
@@ -41,7 +59,7 @@ void \mbox{\hyperlink{class_mokiniai_a48b19837646f9c78fb3627c49f43fafb}{Konsole}
 \subsubsection{\texorpdfstring{Mokiniai()}{Mokiniai()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
 {\footnotesize\ttfamily Mokiniai\+::\+Mokiniai (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
-\mbox{\Hypertarget{class_mokiniai_afe96df1e40d31c353e229ec69b56063a}\label{class_mokiniai_afe96df1e40d31c353e229ec69b56063a}} 
+Sukonstruoja Mokinio objektà \mbox{\Hypertarget{class_mokiniai_afe96df1e40d31c353e229ec69b56063a}\label{class_mokiniai_afe96df1e40d31c353e229ec69b56063a}} 
 \index{Mokiniai@{Mokiniai}!Mokiniai@{Mokiniai}}
 \index{Mokiniai@{Mokiniai}!Mokiniai@{Mokiniai}}
 \subsubsection{\texorpdfstring{Mokiniai()}{Mokiniai()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
@@ -56,11 +74,38 @@ void \mbox{\hyperlink{class_mokiniai_a48b19837646f9c78fb3627c49f43fafb}{Konsole}
 \subsubsection{\texorpdfstring{get\+Average()}{getAverage()}}
 {\footnotesize\ttfamily double Mokiniai\+::get\+Average (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
+Graþinamas vidurkis \begin{DoxyReturn}{Returns}
+Mikinio gal\+Bal\+Vid 
+\end{DoxyReturn}
 \mbox{\Hypertarget{class_mokiniai_a50c74d525d0b2e381b1a7013d1d350e4}\label{class_mokiniai_a50c74d525d0b2e381b1a7013d1d350e4}} 
 \index{Mokiniai@{Mokiniai}!get\+Pavarde@{get\+Pavarde}}
 \index{get\+Pavarde@{get\+Pavarde}!Mokiniai@{Mokiniai}}
 \subsubsection{\texorpdfstring{get\+Pavarde()}{getPavarde()}}
 {\footnotesize\ttfamily std\+::string Mokiniai\+::get\+Pavarde (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_mokiniai_aeba9ca6aee89d720b2e2ff5eda636e4b}\label{class_mokiniai_aeba9ca6aee89d720b2e2ff5eda636e4b}} 
+\index{Mokiniai@{Mokiniai}!operator"!=@{operator"!=}}
+\index{operator"!=@{operator"!=}!Mokiniai@{Mokiniai}}
+\subsubsection{\texorpdfstring{operator"!=()}{operator!=()}}
+{\footnotesize\ttfamily bool Mokiniai\+::operator!= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_mokiniai}{Mokiniai}} \&}]{rhs }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_mokiniai_a4043290f06244077194d8b4cf05ee71f}\label{class_mokiniai_a4043290f06244077194d8b4cf05ee71f}} 
+\index{Mokiniai@{Mokiniai}!operator$<$@{operator$<$}}
+\index{operator$<$@{operator$<$}!Mokiniai@{Mokiniai}}
+\subsubsection{\texorpdfstring{operator$<$()}{operator<()}}
+{\footnotesize\ttfamily bool Mokiniai\+::operator$<$ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_mokiniai}{Mokiniai}} \&}]{rhs }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_mokiniai_a8c87834d732e99917e2c28f8e8b67393}\label{class_mokiniai_a8c87834d732e99917e2c28f8e8b67393}} 
+\index{Mokiniai@{Mokiniai}!operator==@{operator==}}
+\index{operator==@{operator==}!Mokiniai@{Mokiniai}}
+\subsubsection{\texorpdfstring{operator==()}{operator==()}}
+{\footnotesize\ttfamily bool Mokiniai\+::operator== (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_mokiniai}{Mokiniai}} \&}]{rhs }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_mokiniai_ad84735ba48997891195d0e3e97fd89ca}\label{class_mokiniai_ad84735ba48997891195d0e3e97fd89ca}} 
+\index{Mokiniai@{Mokiniai}!operator$>$@{operator$>$}}
+\index{operator$>$@{operator$>$}!Mokiniai@{Mokiniai}}
+\subsubsection{\texorpdfstring{operator$>$()}{operator>()}}
+{\footnotesize\ttfamily bool Mokiniai\+::operator$>$ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_mokiniai}{Mokiniai}} \&}]{rhs }\end{DoxyParamCaption})}
 
 
 
@@ -98,6 +143,12 @@ void Isvestis (\begin{DoxyParamCaption}\item[{T \&}]{Mok }\end{DoxyParamCaption}
 \subsubsection{\texorpdfstring{Nuskaitymas}{Nuskaitymas}}
 {\footnotesize\ttfamily template$<$typename T $>$ \\
 void Nuskaitymas (\begin{DoxyParamCaption}\item[{T \&}]{Mok }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+\mbox{\Hypertarget{class_mokiniai_ac9c70cd14a790b654aa7ef133b173a42}\label{class_mokiniai_ac9c70cd14a790b654aa7ef133b173a42}} 
+\index{Mokiniai@{Mokiniai}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!Mokiniai@{Mokiniai}}
+\subsubsection{\texorpdfstring{operator$<$$<$}{operator<<}}
+{\footnotesize\ttfamily ostream\& operator$<$$<$ (\begin{DoxyParamCaption}\item[{ostream \&}]{output,  }\item[{\mbox{\hyperlink{class_mokiniai}{Mokiniai}} \&}]{M }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
 
 \mbox{\Hypertarget{class_mokiniai_ab5990b7e39e0e6a78a80a20caa87e33d}\label{class_mokiniai_ab5990b7e39e0e6a78a80a20caa87e33d}} 
 \index{Mokiniai@{Mokiniai}!Random@{Random}}
