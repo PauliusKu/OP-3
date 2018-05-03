@@ -1,0 +1,157 @@
+\hypertarget{_headeris_8h}{}\section{Headeris.\+h File Reference}
+\label{_headeris_8h}\index{Headeris.\+h@{Headeris.\+h}}
+{\ttfamily \#include $<$typeinfo$>$}\newline
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include $<$deque$>$}\newline
+{\ttfamily \#include $<$list$>$}\newline
+{\ttfamily \#include $<$iterator$>$}\newline
+{\ttfamily \#include $<$sstream$>$}\newline
+{\ttfamily \#include $<$algorithm$>$}\newline
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_mokiniai}{Mokiniai}}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{_headeris_8h_a63f882ad30f1cfdfcf3a25e1db583fdc}{ivesti\+Sk}} (int a, int b)
+\item 
+bool \mbox{\hyperlink{_headeris_8h_a866468b86797ae1710c8567646f295dd}{custom\+Compare}} (\mbox{\hyperlink{class_mokiniai}{Mokiniai}} \&, \mbox{\hyperlink{class_mokiniai}{Mokiniai}} \&)
+\item 
+double \mbox{\hyperlink{_headeris_8h_adb314a1584daef99ae52c38b422cf307}{Vidurkis}} (vector$<$ int $>$ \&Pazymiai)
+\item 
+double \mbox{\hyperlink{_headeris_8h_a37d151fa85aa74874cb56dcac0cb834e}{Mediana}} (vector$<$ int $>$ \&Pazymiai)
+\item 
+void \mbox{\hyperlink{_headeris_8h_a8f5780f26e06fba685b6d267e9214cf8}{Generuoti\+Faila}} (unsigned int n)
+\item 
+bool \mbox{\hyperlink{_headeris_8h_ab419e66642503a7daeca64b474dd4b82}{Win}} (double i)
+\item 
+bool \mbox{\hyperlink{_headeris_8h_a2c29ce534cdc79dd69a27db62ae478ed}{Maziau}} (\mbox{\hyperlink{class_mokiniai}{Mokiniai}} \&stud)
+\item 
+{\footnotesize template$<$typename T $>$ }\\void \mbox{\hyperlink{_headeris_8h_a8b31ae385d70b2d8716b6a1655a1b606}{Isvestis}} (T \&Mok)
+\item 
+{\footnotesize template$<$typename T $>$ }\\void \mbox{\hyperlink{_headeris_8h_a67edc7d9369cb2287c4f2de53be0d7e1}{Nuskaitymas}} (T \&Mok)
+\item 
+{\footnotesize template$<$typename T $>$ }\\void \mbox{\hyperlink{_headeris_8h_af9a93fbf8962c85921db2e34cdb12b74}{Failas}} (bool b=true)
+\item 
+{\footnotesize template$<$typename T $>$ }\\void \mbox{\hyperlink{_headeris_8h_afdc65dddf430f261a0221df422c76be4}{Failas1}} (bool b=true)
+\item 
+{\footnotesize template$<$$>$ }\\void \mbox{\hyperlink{_headeris_8h_a82f55ef16629213f4d48732b925bb608}{sort\+Container}} (std\+::vector$<$ \mbox{\hyperlink{class_mokiniai}{Mokiniai}} $>$ \&stud)
+\item 
+{\footnotesize template$<$$>$ }\\void \mbox{\hyperlink{_headeris_8h_ae7801f643561e40fed57b3a90eea75fc}{sort\+Container}} (std\+::deque$<$ \mbox{\hyperlink{class_mokiniai}{Mokiniai}} $>$ \&stud)
+\item 
+{\footnotesize template$<$$>$ }\\void \mbox{\hyperlink{_headeris_8h_af87673cf7614e6f2f77e3d5f3cba4bd3}{sort\+Container}} (std\+::list$<$ \mbox{\hyperlink{class_mokiniai}{Mokiniai}} $>$ \&stud)
+\item 
+{\footnotesize template$<$typename T $>$ }\\void \mbox{\hyperlink{_headeris_8h_ab5990b7e39e0e6a78a80a20caa87e33d}{Random}} ()
+\item 
+void \mbox{\hyperlink{_headeris_8h_a48b19837646f9c78fb3627c49f43fafb}{Konsole}} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{_headeris_8h_a866468b86797ae1710c8567646f295dd}\label{_headeris_8h_a866468b86797ae1710c8567646f295dd}} 
+\index{Headeris.\+h@{Headeris.\+h}!custom\+Compare@{custom\+Compare}}
+\index{custom\+Compare@{custom\+Compare}!Headeris.\+h@{Headeris.\+h}}
+\subsubsection{\texorpdfstring{custom\+Compare()}{customCompare()}}
+{\footnotesize\ttfamily bool custom\+Compare (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_mokiniai}{Mokiniai}} \&}]{stud1,  }\item[{\mbox{\hyperlink{class_mokiniai}{Mokiniai}} \&}]{stud2 }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{_headeris_8h_af9a93fbf8962c85921db2e34cdb12b74}\label{_headeris_8h_af9a93fbf8962c85921db2e34cdb12b74}} 
+\index{Headeris.\+h@{Headeris.\+h}!Failas@{Failas}}
+\index{Failas@{Failas}!Headeris.\+h@{Headeris.\+h}}
+\subsubsection{\texorpdfstring{Failas()}{Failas()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void Failas (\begin{DoxyParamCaption}\item[{bool}]{b = {\ttfamily true} }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{_headeris_8h_afdc65dddf430f261a0221df422c76be4}\label{_headeris_8h_afdc65dddf430f261a0221df422c76be4}} 
+\index{Headeris.\+h@{Headeris.\+h}!Failas1@{Failas1}}
+\index{Failas1@{Failas1}!Headeris.\+h@{Headeris.\+h}}
+\subsubsection{\texorpdfstring{Failas1()}{Failas1()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void Failas1 (\begin{DoxyParamCaption}\item[{bool}]{b = {\ttfamily true} }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{_headeris_8h_a8f5780f26e06fba685b6d267e9214cf8}\label{_headeris_8h_a8f5780f26e06fba685b6d267e9214cf8}} 
+\index{Headeris.\+h@{Headeris.\+h}!Generuoti\+Faila@{Generuoti\+Faila}}
+\index{Generuoti\+Faila@{Generuoti\+Faila}!Headeris.\+h@{Headeris.\+h}}
+\subsubsection{\texorpdfstring{Generuoti\+Faila()}{GeneruotiFaila()}}
+{\footnotesize\ttfamily void Generuoti\+Faila (\begin{DoxyParamCaption}\item[{unsigned int}]{n }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{_headeris_8h_a8b31ae385d70b2d8716b6a1655a1b606}\label{_headeris_8h_a8b31ae385d70b2d8716b6a1655a1b606}} 
+\index{Headeris.\+h@{Headeris.\+h}!Isvestis@{Isvestis}}
+\index{Isvestis@{Isvestis}!Headeris.\+h@{Headeris.\+h}}
+\subsubsection{\texorpdfstring{Isvestis()}{Isvestis()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void Isvestis (\begin{DoxyParamCaption}\item[{T \&}]{Mok }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{_headeris_8h_a63f882ad30f1cfdfcf3a25e1db583fdc}\label{_headeris_8h_a63f882ad30f1cfdfcf3a25e1db583fdc}} 
+\index{Headeris.\+h@{Headeris.\+h}!ivesti\+Sk@{ivesti\+Sk}}
+\index{ivesti\+Sk@{ivesti\+Sk}!Headeris.\+h@{Headeris.\+h}}
+\subsubsection{\texorpdfstring{ivesti\+Sk()}{ivestiSk()}}
+{\footnotesize\ttfamily int ivesti\+Sk (\begin{DoxyParamCaption}\item[{int}]{a,  }\item[{int}]{b }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{_headeris_8h_a48b19837646f9c78fb3627c49f43fafb}\label{_headeris_8h_a48b19837646f9c78fb3627c49f43fafb}} 
+\index{Headeris.\+h@{Headeris.\+h}!Konsole@{Konsole}}
+\index{Konsole@{Konsole}!Headeris.\+h@{Headeris.\+h}}
+\subsubsection{\texorpdfstring{Konsole()}{Konsole()}}
+{\footnotesize\ttfamily void Konsole (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{_headeris_8h_a2c29ce534cdc79dd69a27db62ae478ed}\label{_headeris_8h_a2c29ce534cdc79dd69a27db62ae478ed}} 
+\index{Headeris.\+h@{Headeris.\+h}!Maziau@{Maziau}}
+\index{Maziau@{Maziau}!Headeris.\+h@{Headeris.\+h}}
+\subsubsection{\texorpdfstring{Maziau()}{Maziau()}}
+{\footnotesize\ttfamily bool Maziau (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_mokiniai}{Mokiniai}} \&}]{stud }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{_headeris_8h_a37d151fa85aa74874cb56dcac0cb834e}\label{_headeris_8h_a37d151fa85aa74874cb56dcac0cb834e}} 
+\index{Headeris.\+h@{Headeris.\+h}!Mediana@{Mediana}}
+\index{Mediana@{Mediana}!Headeris.\+h@{Headeris.\+h}}
+\subsubsection{\texorpdfstring{Mediana()}{Mediana()}}
+{\footnotesize\ttfamily double Mediana (\begin{DoxyParamCaption}\item[{vector$<$ int $>$ \&}]{Pazymiai }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{_headeris_8h_a67edc7d9369cb2287c4f2de53be0d7e1}\label{_headeris_8h_a67edc7d9369cb2287c4f2de53be0d7e1}} 
+\index{Headeris.\+h@{Headeris.\+h}!Nuskaitymas@{Nuskaitymas}}
+\index{Nuskaitymas@{Nuskaitymas}!Headeris.\+h@{Headeris.\+h}}
+\subsubsection{\texorpdfstring{Nuskaitymas()}{Nuskaitymas()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void Nuskaitymas (\begin{DoxyParamCaption}\item[{T \&}]{Mok }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{_headeris_8h_ab5990b7e39e0e6a78a80a20caa87e33d}\label{_headeris_8h_ab5990b7e39e0e6a78a80a20caa87e33d}} 
+\index{Headeris.\+h@{Headeris.\+h}!Random@{Random}}
+\index{Random@{Random}!Headeris.\+h@{Headeris.\+h}}
+\subsubsection{\texorpdfstring{Random()}{Random()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void Random (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{_headeris_8h_a82f55ef16629213f4d48732b925bb608}\label{_headeris_8h_a82f55ef16629213f4d48732b925bb608}} 
+\index{Headeris.\+h@{Headeris.\+h}!sort\+Container@{sort\+Container}}
+\index{sort\+Container@{sort\+Container}!Headeris.\+h@{Headeris.\+h}}
+\subsubsection{\texorpdfstring{sort\+Container()}{sortContainer()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily template$<$$>$ \\
+void sort\+Container (\begin{DoxyParamCaption}\item[{std\+::vector$<$ \mbox{\hyperlink{class_mokiniai}{Mokiniai}} $>$ \&}]{stud }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{_headeris_8h_ae7801f643561e40fed57b3a90eea75fc}\label{_headeris_8h_ae7801f643561e40fed57b3a90eea75fc}} 
+\index{Headeris.\+h@{Headeris.\+h}!sort\+Container@{sort\+Container}}
+\index{sort\+Container@{sort\+Container}!Headeris.\+h@{Headeris.\+h}}
+\subsubsection{\texorpdfstring{sort\+Container()}{sortContainer()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily template$<$$>$ \\
+void sort\+Container (\begin{DoxyParamCaption}\item[{std\+::deque$<$ \mbox{\hyperlink{class_mokiniai}{Mokiniai}} $>$ \&}]{stud }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{_headeris_8h_af87673cf7614e6f2f77e3d5f3cba4bd3}\label{_headeris_8h_af87673cf7614e6f2f77e3d5f3cba4bd3}} 
+\index{Headeris.\+h@{Headeris.\+h}!sort\+Container@{sort\+Container}}
+\index{sort\+Container@{sort\+Container}!Headeris.\+h@{Headeris.\+h}}
+\subsubsection{\texorpdfstring{sort\+Container()}{sortContainer()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily template$<$$>$ \\
+void sort\+Container (\begin{DoxyParamCaption}\item[{std\+::list$<$ \mbox{\hyperlink{class_mokiniai}{Mokiniai}} $>$ \&}]{stud }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{_headeris_8h_adb314a1584daef99ae52c38b422cf307}\label{_headeris_8h_adb314a1584daef99ae52c38b422cf307}} 
+\index{Headeris.\+h@{Headeris.\+h}!Vidurkis@{Vidurkis}}
+\index{Vidurkis@{Vidurkis}!Headeris.\+h@{Headeris.\+h}}
+\subsubsection{\texorpdfstring{Vidurkis()}{Vidurkis()}}
+{\footnotesize\ttfamily double Vidurkis (\begin{DoxyParamCaption}\item[{vector$<$ int $>$ \&}]{Pazymiai }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{_headeris_8h_ab419e66642503a7daeca64b474dd4b82}\label{_headeris_8h_ab419e66642503a7daeca64b474dd4b82}} 
+\index{Headeris.\+h@{Headeris.\+h}!Win@{Win}}
+\index{Win@{Win}!Headeris.\+h@{Headeris.\+h}}
+\subsubsection{\texorpdfstring{Win()}{Win()}}
+{\footnotesize\ttfamily bool Win (\begin{DoxyParamCaption}\item[{double}]{i }\end{DoxyParamCaption})}
+
