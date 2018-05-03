@@ -22,7 +22,7 @@
 
 #### Pašalinta
 
-### [Changelog v0.1 (2018-04-03)](https://github.com/PauliusKu/OP-3/releases/tag/v0.2)
+### [Changelog v0.2 (2018-04-03)](https://github.com/PauliusKu/OP-3/releases/tag/v0.2)
 #### Pridėta
 - Doxygen sugeneruoti failai
 - Pridėtos naujos member funkcijos
